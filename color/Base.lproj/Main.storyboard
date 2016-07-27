@@ -1,25 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="color" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GT1-q6-Hyk">
+                                <rect key="frame" x="185" y="229" width="170" height="30"/>
+                                <state key="normal" title="Hide Happy Dog"/>
+                                <connections>
+                                    <action selector="hideHappy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2cL-vU-EzE"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="p18l30ibcnohmsc2so45sb165s3" translatesAutoresizingMaskIntoConstraints="NO" id="rSw-hT-uu2">
+                                <rect key="frame" x="192" y="41" width="163" height="150"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnb-0W-nGw">
+                                <rect key="frame" x="34" y="229" width="143" height="30"/>
+                                <state key="normal" title="Hide Angry Dog "/>
+                                <connections>
+                                    <action selector="hideAngery:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nov-F2-P5b"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dog-bite-prevention" translatesAutoresizingMaskIntoConstraints="NO" id="25e-KP-7te">
+                                <rect key="frame" x="14" y="41" width="163" height="150"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="Angery_photo" destination="25e-KP-7te" id="Li0-hI-hXO"/>
+                        <outlet property="Angry_dog" destination="nnb-0W-nGw" id="zfc-GE-a9u"/>
+                        <outlet property="happy_dog" destination="GT1-q6-Hyk" id="a7q-Ys-qMs"/>
+                        <outlet property="happy_photo" destination="rSw-hT-uu2" id="N6d-oQ-o0r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304.5" y="428.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Dog-bite-prevention" width="845" height="450"/>
+        <image name="p18l30ibcnohmsc2so45sb165s3" width="590" height="290"/>
+    </resources>
 </document>
